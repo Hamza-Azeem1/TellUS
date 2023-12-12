@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Bars3Icon } from "@heroicons/react/24/outline";
+import { MenuIcon } from "@heroicons/react/solid";
 import logo from "../assets/logo.png";
 
 function Navbar() {
@@ -7,7 +7,7 @@ function Navbar() {
 
     return (
         <div className="app">
-            <nav className="bg-black h-16">
+            <nav className="bg-gray-800 h-16">
                 <div className="w-full mx-auto">
                     <div className="flex items-center justify-between w-full">
                         <div>
@@ -18,7 +18,7 @@ function Navbar() {
                             {/* Mobile navigation toggle */}
                             <div className="lg:hidden flex items-center mx-6">
                                 <button onClick={() => setToggleMenu(!toggleMenu)}>
-                                    <Bars3Icon className="h-8 text-white" />
+                                    <MenuIcon className="h-8 text-white" />
                                 </button>
                             </div>
                         </div>
@@ -35,6 +35,9 @@ function Navbar() {
                             </a>
                             <a href="#" className="text-white hover:text-gray-300">
                                 Portfolio
+                            </a>
+                            <a href="#" className="text-white hover:text-gray-300">
+                                Contact
                             </a>
                         </div>
                     </div>
@@ -57,6 +60,9 @@ function Navbar() {
                             </a>
                             <a href="#" className="text-black hover:text-gray-700">
                                 Portfolio
+                            </a>
+                            <a href="#" className="text-black hover:text-gray-700">
+                                Contact
                             </a>
                         </div>
                     </div>
