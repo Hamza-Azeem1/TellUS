@@ -1,6 +1,7 @@
 import Navbar from "./components/navbar"
 import Banner from "./components/banner"
 import ServiceSection from "./components/services";
+import ProcessFlow from "./components/process"
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Banner />
       <ServiceSection />
+      <ProcessFlow />
     </>
   );
 }
