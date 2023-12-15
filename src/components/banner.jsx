@@ -1,25 +1,25 @@
-import ReactPlayer from "react-player";
 import video from "../assets/bg-video.mp4";
 
 const Banner = () => {
     return (
-        <div className="relative h-screen w-full overflow-hidden">
-            <ReactPlayer
-                url={video}
-                playing
+        <section style={{ position: "relative", minHeight: "100vh" }}>
+            <video
+                autoPlay
                 loop
                 muted
-                width="100%"
-                height="100%"
-                style={{ position: "absolute", top: 0, left: 0 }}
-            />
+                className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+            >
+                <source src={video} type="video/mp4" />
+            </video>
 
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                <h1 className="text-3xl lg:text-5xl font-bold">
-                    If opportunity does not knock, build a door
-                </h1>
+            <div className="flex flex-col justify-center items-center min-h-screen relative z-10">
+                <div className="text-white text-center">
+                    <h1 className="text-3xl lg:text-5xl font-bold">
+                        If opportunity does not knock, build a door
+                    </h1>
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 
