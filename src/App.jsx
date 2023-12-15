@@ -5,6 +5,7 @@ import ProcessFlow from "./components/process";
 import ProjectFilter from "./components/projects";
 import TeamMembers from "./components/team";
 import Slider from "./components/slider";
+import Footer from "./components/footer"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <ProjectFilter />
       <TeamMembers />
       <Slider />
+      <Footer />
     </>
   );
 }
