@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MenuIcon } from "@heroicons/react/solid";
 import logo from "../assets/logo.png";
 
 function Navbar() {
     const [toggleMenu, setToggleMenu] = useState(false);
+
+    useEffect(() => {
+        document.body.style.overflow = toggleMenu ? "hidden" : "auto";
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [toggleMenu]);
 
     return (
         <div className="app">
@@ -13,16 +21,13 @@ function Navbar() {
                         <div>
                             <img src={logo} alt="Logo" className="h-12" style={{ margin: "6px", padding: 0 }} />
                         </div>
-                        {/* secondary */}
                         <div className="flex gap-6">
-                            {/* Mobile navigation toggle */}
                             <div className="lg:hidden flex items-center mx-6">
                                 <button onClick={() => setToggleMenu(!toggleMenu)}>
                                     <MenuIcon className="h-8 text-white" />
                                 </button>
                             </div>
                         </div>
-                        {/* primary */}
                         <div className="hidden lg:flex gap-8 mx-10">
                             <a href="#" className="text-white hover:text-gray-300">
                                 Home
@@ -42,7 +47,6 @@ function Navbar() {
                         </div>
                     </div>
                 </div>
-                {/* mobile navigation */}
                 <div
                     className={`fixed z-40 w-full bg-gray-100 overflow-hidden flex flex-col lg:hidden gap-12 origin-top duration-700 ${!toggleMenu ? "h-0" : "h-full"
                         }`}
