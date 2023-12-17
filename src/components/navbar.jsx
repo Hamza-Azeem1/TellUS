@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { MenuIcon } from "@heroicons/react/solid";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 function Navbar() {
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -29,21 +30,21 @@ function Navbar() {
                             </div>
                         </div>
                         <div className="hidden lg:flex gap-8 mx-10">
-                            <a href="#" className="text-white hover:text-gray-300">
+                            <Link to="/" className="text-white hover:text-gray-300">
                                 Home
-                            </a>
-                            <a href="#" className="text-white hover:text-gray-300">
+                            </Link>
+                            <Link to="/about" className="text-white hover:text-gray-300">
                                 About us
-                            </a>
-                            <a href="#" className="text-white hover:text-gray-300">
+                            </Link>
+                            <Link to="/services" className="text-white hover:text-gray-300">
                                 Services
-                            </a>
-                            <a href="#" className="text-white hover:text-gray-300">
+                            </Link>
+                            <Link to="/portfolio" className="text-white hover:text-gray-300">
                                 Portfolio
-                            </a>
-                            <a href="#" className="text-white hover:text-gray-300">
+                            </Link>
+                            <Link to="/contact" className="text-white hover:text-gray-300">
                                 Contact
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -53,21 +54,21 @@ function Navbar() {
                 >
                     <div className="px-8">
                         <div className="flex flex-col gap-8 font-bold tracking-wider">
-                            <a href="#" className="border-l-4 border-gray-800 text-black hover:text-gray-700">
+                            <Link to="/" className="border-l-4 border-gray-800 text-black hover:text-gray-700">
                                 Home
-                            </a>
-                            <a href="#" className="text-black hover:text-gray-700">
+                            </Link>
+                            <Link to="/about" className="text-black hover:text-gray-700">
                                 About us
-                            </a>
-                            <a href="#" className="text-black hover:text-gray-700">
+                            </Link>
+                            <Link to="/services" className="text-black hover:text-gray-700">
                                 Services
-                            </a>
-                            <a href="#" className="text-black hover:text-gray-700">
+                            </Link>
+                            <Link to="/portfolio" className="text-black hover:text-gray-700">
                                 Portfolio
-                            </a>
-                            <a href="#" className="text-black hover:text-gray-700">
+                            </Link>
+                            <Link to="/contact" className="text-black hover:text-gray-700">
                                 Contact
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

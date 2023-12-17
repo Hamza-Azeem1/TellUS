@@ -1,5 +1,6 @@
 import { FaFacebook, FaInstagram, FaLinkedin, FaCopyright } from 'react-icons/fa';
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -8,7 +9,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-center items-center mb-8">
                     <div className="w-full md:w-1/4 text-center md:text-left mb-4 md:mb-0">
                         <img src={logo} alt="Company Logo" className="w-16 h-16 object-contain" />
-                        <p className="italic md:text-left mt-2 md:mt-0">Build your projects with us just Tell Us.</p>
+                        <p className="italic md:text-left mt-2 md:mt-0">Build your ideas with us just Tell Us.</p>
                     </div>
                     <div className="w-full md:w-3/4 text-center md:text-left">
                         <div className="flex flex-col md:flex-row md:justify-between">
@@ -16,13 +17,19 @@ const Footer = () => {
                                 <h2 className="text-lg font-semibold mb-2">Quick Links</h2>
                                 <ul className="list-none p-0 m-0">
                                     <li className="mb-2">
-                                        <a href="#">About Us</a>
+                                        <Link to="/about" className="text-white hover:underline">
+                                            About Us
+                                        </Link>
                                     </li>
                                     <li className="mb-2">
-                                        <a href="#">Our Services</a>
+                                        <Link to="/services" className="text-white hover:underline">
+                                            Our Services
+                                        </Link>
                                     </li>
                                     <li className="mb-2">
-                                        <a href="#">Contact Us</a>
+                                        <Link to="/contact" className="text-white hover:underline">
+                                            Contact Us
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
