@@ -10,6 +10,7 @@ import Footer from "./components/footer";
 import Aboutus from "./components/about";
 import PortfolioPage from "./components/portfolio";
 import Contactus from "./components/contact";
+import ScrollToTop from "./components/scroll";
 
 const Home = () => (
   <>
@@ -21,6 +22,7 @@ const Home = () => (
     <TeamMembers />
     <Slider />
     <Footer />
+    <ScrollToTop />
   </>
 );
 

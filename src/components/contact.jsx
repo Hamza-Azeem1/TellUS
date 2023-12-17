@@ -1,83 +1,90 @@
-import { FaEnvelope, FaPhone, FaFacebook, FaInstagram, FaLinkedin, FaUser, FaEnvelopeSquare, FaMobileAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaFacebook, FaInstagram, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
     return (
-        <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4">
-            {/* Contact Us Header */}
-            <h2 className="text-4xl font-bold mb-4">Contact Us</h2>
-
-            <div className="max-w-full flex flex-col items-center md:flex-row md:justify-between">
-                {/* Left Side: Contact Information */}
-                <div className="mb-8 md:mr-8 text-center md:text-left">
-                    {/* Contact Information */}
-                    <div className="mb-4 text-left">
-                        <p className="flex items-center mb-2">
-                            <FaEnvelope className="mr-2" />
-                            Email: info@example.com
-                        </p>
-                        <p className="flex items-center mb-2">
-                            <FaPhone className="mr-2" />
-                            Phone: +1 (123) 456-7890
-                        </p>
-                        <div className="flex items-center space-x-4">
-                            <a href="#" className="text-white hover:text-gray-300">
-                                <FaFacebook />
-                            </a>
-                            <a href="#" className="text-white hover:text-gray-300">
-                                <FaInstagram />
-                            </a>
-                            <a href="#" className="text-white hover:text-gray-300">
-                                <FaLinkedin />
-                            </a>
-                        </div>
+        <div className="flex flex-wrap bg-gray-900">
+            <div className="w-full lg:w-1/2 text-left mt-20 max-w-xl px-6">
+                <h1 className="font-bold text-2xl text-white mt-12 mb-8">Contact Us</h1>
+                <ul className="font-semi-bold">
+                    <li className="flex items-center mb-2">
+                        <FaEnvelope className="text-2xl text-gray-500 dark:text-gray-400 mr-4" />
+                        <span className="text-lg mb-4 text-white">Email: info@example.com</span>
+                    </li>
+                    <li className="flex items-center mb-2">
+                        <FaPhone className="text-2xl text-gray-500 dark:text-gray-400 mr-4" />
+                        <span className="text-lg mb-4 text-white">Phone: +1 (123) 456-7890</span>
+                    </li>
+                    <div className="flex items-center space-x-4">
+                        <a href="#" className="text-white hover:text-gray-300 text-2xl">
+                            <FaFacebook />
+                        </a>
+                        <a href="#" className="text-white hover:text-gray-300 text-2xl">
+                            <FaInstagram />
+                        </a>
+                        <a href="#" className="text-white hover:text-gray-300 text-2xl">
+                            <FaLinkedin />
+                        </a>
                     </div>
 
-                    {/* Compliment */}
-                    <p className="text-gray-300">
-                        Have a question or want to say hello? Feel free to reach out to our team.
-                    </p>
-                </div>
+                </ul>
 
-                {/* Right Side: Contact Form */}
-                <div className="max-w-md text-center md:ml-8">
-                    {/* Contact Form Header */}
-                    <h3 className="text-2xl font-bold mb-4">Say Hello</h3>
+                <p className="text-gray-200 mt-5">
+                    Have a question or want to say hello? Feel free to reach out to our team.
+                </p>
+            </div>
 
-                    {/* Contact Form */}
-                    <form className="text-left">
-                        <div className="mb-4">
-                            <label className="block text-gray-300 mb-2">
-                                <FaUser className="mr-2 inline-block" />
-                                Your Name
-                            </label>
-                            <input type="text" className="w-full bg-gray-800 text-white p-2 rounded" placeholder="John Doe" />
-                        </div>
-                        <div className="mb-4">
-                            <label className="block text-gray-300 mb-2">
-                                <FaEnvelopeSquare className="mr-2 inline-block" />
-                                Email
-                            </label>
-                            <input type="email" className="w-full bg-gray-800 text-white p-2 rounded" placeholder="example@example.com" />
-                        </div>
-                        <div className="mb-4">
-                            <label className="block text-gray-300 mb-2">
-                                <FaMobileAlt className="mr-2 inline-block" />
-                                Phone
-                            </label>
-                            <input type="tel" className="w-full bg-gray-800 text-white p-2 rounded" placeholder="+1 (123) 456-7890" />
-                        </div>
-                        <div className="mb-4">
-                            <label className="block text-gray-300 mb-2">
-                                <FaPaperPlane className="mr-2 inline-block" />
-                                Message
-                            </label>
-                            <textarea className="w-full bg-gray-800 text-white p-2 rounded" rows="4" placeholder="Your message here"></textarea>
-                        </div>
-                        <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded">
-                            Send
+            <div className="w-full lg:w-1/2 mt-10">
+                <form
+                    className="max-w-xl mx-auto m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
+                >
+                    <div className="flex items-center mb-8">
+                        <p className="font-bold text-white text-2xl">Contact Form</p>
+                    </div>
+                    <div className="text-gray-200 font-lg">
+                        <label htmlFor="name">Full Name:</label>
+                        <input
+                            type="text"
+                            className="w-full px-5 py-2 border border-gray-300 border-opacity-50 text-black bg-gray-200 rounded-md shadow-sm text-md"
+                            id="name"
+                            name="name"
+                            aria-label="Name"
+                            placeholder='Your Name'
+                        />
+                    </div>
+                    <div className="text-gray-200 font-lg mt-5">
+                        <label htmlFor="email">Email id:</label>
+                        <input
+                            type="email"
+                            className="w-full px-5 py-2 border border-gray-300 border-opacity-50 text-black bg-gray-200 rounded-md shadow-sm text-md"
+                            id="email"
+                            name="email"
+                            aria-label="Email"
+                            placeholder='example@domain.com'
+                        />
+                    </div>
+                    <div className="mt-6">
+                        <label className="text-gray-200 block text-lg text-dark mb-2" htmlFor="message">
+                            Message:
+                        </label>
+                        <textarea
+                            className="w-full px-5 py-2 border border-gray-300 border-opacity-50 text-black bg-gray-200 rounded-md shadow-sm text-md"
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder='Write your message here'
+                            aria-label="Message"
+                        ></textarea>
+                    </div>
+                    <div className="flex items-center">
+                        <button
+                            type="submit"
+                            className="cursor-pointer flex items-center justify-center font-general-medium w-full lg:w-1/2 px-4 py-2.5 text-white text-center font-medium tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg mt-6 duration-500"
+                        >
+                            <FaPaperPlane size={25} className="mr-2" />
+                            Send message
                         </button>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     );
