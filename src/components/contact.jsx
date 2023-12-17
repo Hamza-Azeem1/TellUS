@@ -1,6 +1,43 @@
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { FaEnvelope, FaPhone, FaFacebook, FaInstagram, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_yvb3xui', 'template_sqoek9v', form.current, '1oxOGxOcXbxysWbSe')
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    toast.success('Email sent successfully!', {
+                        position: toast.POSITION.TOP_CENTER,
+                        onClose: () => {
+                            setTimeout(() => {
+                                window.location.reload();
+                            }, 3000);
+                        },
+                    });
+                },
+                (error) => {
+                    console.log(error.text);
+                    toast.error('Failed to send email. Please try again.', {
+                        position: toast.POSITION.TOP_CENTER,
+                        onClose: () => {
+                            setTimeout(() => {
+                                window.location.reload();
+                            }, 3000);
+                        },
+                    });
+                }
+            );
+    };
+
     return (
         <div className="flex flex-wrap bg-gray-900">
             <div className="w-full lg:w-1/2 text-left mt-20 max-w-xl px-6">
@@ -25,7 +62,6 @@ const Contact = () => {
                             <FaLinkedin />
                         </a>
                     </div>
-
                 </ul>
 
                 <p className="text-gray-200 mt-5">
@@ -35,6 +71,8 @@ const Contact = () => {
 
             <div className="w-full lg:w-1/2 mt-10">
                 <form
+                    ref={form}
+                    onSubmit={sendEmail}
                     className="max-w-xl mx-auto m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
                 >
                     <div className="flex items-center mb-8">
@@ -86,6 +124,7 @@ const Contact = () => {
                     </div>
                 </form>
             </div>
+            <ToastContainer />
         </div>
     );
 };
