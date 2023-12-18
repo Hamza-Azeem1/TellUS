@@ -8,7 +8,6 @@ import TeamMembers from "./components/team";
 import Slider from "./components/slider";
 import Footer from "./components/footer";
 import Aboutus from "./components/about";
-import PortfolioPage from "./components/portfolio";
 import Contactus from "./components/contact";
 import ScrollToTop from "./components/scroll";
 import NotFound from "./components/notfound";
@@ -46,7 +45,7 @@ const ServicesComponent = () => (
 const Portfolio = () => (
   <>
     <Navbar />
-    <PortfolioPage />
+    <ProjectFilter />
     <Footer />
   </>
 );
