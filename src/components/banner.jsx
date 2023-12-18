@@ -1,12 +1,13 @@
-import video from "../assets/bg-video.mp4";
+import video from '../assets/bg-video.mp4';
 
 const Banner = () => {
   return (
-    <section style={{ position: "relative", minHeight: "100vh" }}>
+    <section style={{ position: 'relative', minHeight: '100vh' }}>
       <video
         autoPlay
         loop
         muted
+        playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
       >
         <source src={video} type="video/mp4" />

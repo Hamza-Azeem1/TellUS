@@ -11,6 +11,7 @@ import Aboutus from "./components/about";
 import PortfolioPage from "./components/portfolio";
 import Contactus from "./components/contact";
 import ScrollToTop from "./components/scroll";
+import NotFound from "./components/notfound";
 
 const Home = () => (
   <>
@@ -54,7 +55,14 @@ const Contact = () => (
   <>
     <Navbar />
     <Contactus />
+    <Footer />
+  </>
+);
 
+const PageNotFound = () => (
+  <>
+    <Navbar />
+    <NotFound />
     <Footer />
   </>
 );
@@ -68,6 +76,7 @@ function App() {
         <Route path="/services" element={<ServicesComponent />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
   );

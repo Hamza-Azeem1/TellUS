@@ -51,7 +51,7 @@ const Footer = () => {
                                 <h2 className="text-lg font-semibold mb-2">Contact Info</h2>
                                 <p className="mb-2">Email: your@email.com</p>
                                 <p className="mb-2">Phone: +123 456 7890</p>
-                                <div className="flex justify-center md:justify-start">
+                                <div className="flex justify-center md:justify-start text-2xl">
                                     <a href="#" className="mr-2">
                                         <FaFacebook />
                                     </a>

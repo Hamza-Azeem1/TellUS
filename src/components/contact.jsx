@@ -5,13 +5,16 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaEnvelope, FaPhone, FaFacebook, FaInstagram, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
+    const serviceId = import.meta.env.VITE_REACT_APP_SERVICE_ID;
+    const templateId = import.meta.env.VITE_REACT_APP_TEMPLATE_ID;
+    const publicId = import.meta.env.VITE_REACT_APP_PUBLIC_ID;
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
 
         emailjs
-            .sendForm('service_yvb3xui', 'template_sqoek9v', form.current, '1oxOGxOcXbxysWbSe')
+            .sendForm(serviceId, templateId, form.current, publicId)
             .then(
                 (result) => {
                     console.log(result.text);
@@ -76,7 +79,7 @@ const Contact = () => {
                     className="max-w-xl mx-auto m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
                 >
                     <div className="flex items-center mb-8">
-                        <p className="font-bold text-white text-2xl">Contact Form</p>
+                        <p className="font-bold text-white text-2xl">SAY HELLO!</p>
                     </div>
                     <div className="text-gray-200 font-lg">
                         <label htmlFor="name">Full Name:</label>
