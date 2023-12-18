@@ -47,13 +47,18 @@ const Contact = () => {
                 <h1 className="font-bold text-2xl text-white mt-12 mb-8">Contact Us</h1>
                 <ul className="font-semi-bold">
                     <li className="flex items-center mb-2">
-                        <FaEnvelope className="text-2xl text-gray-500 dark:text-gray-400 mr-4" />
-                        <span className="text-lg mb-4 text-white">Email: info@example.com</span>
+                        <div className="flex items-center">
+                            <FaEnvelope className="text-2xl text-gray-500 dark:text-gray-400 mr-4" />
+                            <span className="text-lg text-white">Email: info@example.com</span>
+                        </div>
                     </li>
-                    <li className="flex items-center mb-2">
-                        <FaPhone className="text-2xl text-gray-500 dark:text-gray-400 mr-4" />
-                        <span className="text-lg mb-4 text-white">Phone: +1 (123) 456-7890</span>
+                    <li className="flex items-center mb-6">
+                        <div className="flex items-center">
+                            <FaPhone className="text-2xl text-gray-500 dark:text-gray-400 mr-4" />
+                            <span className="text-lg text-white">Phone: +1 (123) 456-7890</span>
+                        </div>
                     </li>
+
                     <div className="flex items-center space-x-4">
                         <a href="#" className="text-white hover:text-gray-300 text-2xl">
                             <FaFacebook />
