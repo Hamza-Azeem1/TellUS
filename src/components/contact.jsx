@@ -95,6 +95,7 @@ const Contact = () => {
                             name="name"
                             aria-label="Name"
                             placeholder='Your Name'
+                            required
                         />
                     </div>
                     <div className="text-gray-200 font-lg mt-5">
@@ -106,6 +107,7 @@ const Contact = () => {
                             name="email"
                             aria-label="Email"
                             placeholder='example@domain.com'
+                            required
                         />
                     </div>
                     <div className="mt-6">
@@ -119,6 +121,7 @@ const Contact = () => {
                             rows="6"
                             placeholder='Write your message here'
                             aria-label="Message"
+                            required
                         ></textarea>
                     </div>
                     <div className="flex items-center">
